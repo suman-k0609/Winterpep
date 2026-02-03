@@ -40,7 +40,7 @@ void insertAtposition(Node* &head,int val,int pos){
 		return;
 	}
 	node->next=temp->next;
-	temp->next=node;
+	temp=node;
 }
 void insertAtBegning(Node* &head,int val){
 	Node* node=new Node(val);
