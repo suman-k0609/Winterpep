@@ -15,9 +15,9 @@ void deleteAtend(Node* &head){
 	while(temp->next->next!=NULL){
 		temp=temp->next;
 	}
-	Node *Lnode=temp->next;
+	delete(temp->next);
 	temp->next=NULL;
-	delete(Lnode);
+//	delete(Lnode);
 	cout<<endl;
 }
 void deleteAtbeg(Node* &head){
