@@ -46,6 +46,25 @@ class Node{
         right=NULL;
     }
 };
+void levelorder(Node* root){
+    if(root==NULL) return;
+    //first create a queue and push root and null
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
+    while(!q.empty()){
+        Node* frontnode=q.front();
+        q.pop();
+        if(frontnode!=NULL){
+            cout<< frontnode->data<<" ";
+            if(frontnode->left) q.push(frontnode->left);
+            if(frontnode->right) q.push(frontnode->right);
+        }
+        else if(!q.empty()){
+            q.push(NULL);
+        }
+    }
+}
 
 int main(){
     Node* root=new Node(1);
