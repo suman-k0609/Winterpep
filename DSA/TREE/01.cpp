@@ -30,6 +30,9 @@ using namespace std;
         1. Full binary tree -> a tree of height h has all its leaves at level h, means all non leaf nodes of a full binary tree has two children, and the leaf node have no children
         2. Complete binary tree -> all levels are filled except the last level, the last level should be filled from left to right
         3. Skew binary tree -> tilted to any one side only -> left skewed binary tree and right skewed binary tree
+
+
+        A binary tree is balanced if for every node the height diff b/w its left & right subtree is st most one
 */
 class Node{
     public:
