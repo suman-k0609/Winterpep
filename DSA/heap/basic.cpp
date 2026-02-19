@@ -15,3 +15,7 @@
 // left child=2*i;
 // right child=2*i+1;
 // parent=i/2
+
+// heapification
+// n/2+1 to n is already at correct position
+
