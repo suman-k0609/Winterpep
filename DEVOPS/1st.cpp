@@ -22,3 +22,5 @@
 
 
 // choco install vscode -y
+//& "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" --version
+
