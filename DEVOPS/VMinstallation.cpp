@@ -1,37 +1,135 @@
-// Create a project folder
+// //List files and directories (ls)
+// ls -> show all files i current directory
+// ls -l -> detailed info
+// ls -a -> hidden files
+// ls -lh -> readable form of size
 
-// mkdir -p /a/b/c
-
-// initialize vagrant with ubuntu box
-// vagrant init bento/ubuntu-22.04
-
-// Vagrantfile is created
-
-// --------------------------------------
-// edit the Vagrantfile with 
-
-
-// # -*- mode: ruby -*-
-// # vi: set ft=ruby :
-
-// Vagrant.configure("2") do |config|
-
-//   config.vm.box = "bento/ubuntu-22.04"
-
-//   config.vm.provider "virtualbox" do |vb|
-//     vb.name   = "ubuntu-devops"
-//     vb.memory = "2048"
-//     vb.cpus   = 2
-//     vb.gui    = false
-//   end
-
-// end
-// ---------------------------------------
+// mkdir project{1..3} -> 3 directories at one go
 
 
 
+// //Creating files (touch)
 
-// vagrant up
-// vagrant ssh
-// vagrant halt
-// vagrant destroy
+// touch file1.txt ->create
+
+// cat file1.txt -> display the file content
+
+
+// //copy (cp)
+// cp file1 copy_file1 ->copy file in same directory
+// cp file1 folder1/ -> copy file in another directory
+
+
+// cp -r project1 backup/ -> copy a directory
+
+
+
+// //Move or rename (mv)
+
+// mv file1 myCodes.txt ->rename from file1 to myCodes
+
+// mv myCodes.txt ~/linux-practice/backup -> move myCodes.txt to backup
+
+
+// //remove (rm)
+// rm file1.txt -> delete file1
+
+
+// rmdir project2 -> to remove empty directory
+// rm -r folder1 -> to remove non empty directory
+// rm -rf backup -> force remove
+
+
+
+
+// //File type
+
+// Symbol       File type
+// -            Regular file
+// d            Directory
+// l            Symbolic link  -> it is like a shortcut to another file and it does not contain the data itself
+// b            block device
+// p            named pipe
+// s            socket
+
+
+// less students.txt -> used for viewing large files
+// more students.txt -> show one page at time
+
+// head -n 3 students.txt -> view first 3 lines
+// tail -n 4 students.txt -> view last 4 lines
+
+
+// grep Devops students.txt -> search for Devops
+// grep -i devops students.txt -> search ignoring case
+
+// grep -E "Cloud|Security" students.txt -> search multiple things
+
+
+// cut -d " " -f3 students.txt -> extracts the 3rd feild
+
+
+// sed 's/Security/Cyber/g' students.txt -> search and replace Security with cyber
+
+// sed '3d' students.txt -> deleting 3rd line
+
+// sed -n '2,5p' students.txt -> print from line 2 to 5
+
+
+// sort -k2 students.txt -> sort by column 2
+
+
+
+// //File permissons
+// r -> read, w -> write x -> execute
+
+//    -                 rw-                rw-                r--
+// file type      owner permission     group permission   other permissions
+
+
+// //how to change file permissions (chmod)
+
+// //symbolic method ->
+// letter ->
+// u  -> user(owner)
+// g  -> group
+// o  -> others
+// a  -> all
+
+// operators ->
+// + -> add permission
+// - -> remove permission
+// = -> assign permission
+
+
+
+
+// //Numeric method
+// read -> 4
+// write -> 2
+// execute -> 1
+
+// rwx -> 7
+// r-x -> 5
+// rw- -> 6
+// r-- -> 4
+// --- -> 0
+
+// chmod 755 -> user(rwx) group(r-x) other(r-x)
+
+
+// chmod -R for recursive permission change
+
+
+
+
+// //users and groups
+
+
+// sudo groupadd groupname
+
+// sudo useradd -m username
+
+// sudo usermod -aG frontend user1 -> add user1 to frontend group
+
+// groups user1 -> check user group
